@@ -1,0 +1,9 @@
+apiVersion: snapshot.storage.k8s.io/v1
+kind: VolumeSnapshot
+metadata:
+  name: git-cache-snapshot-manual-1
+  namespace: default
+spec:
+  volumeSnapshotClassName: standard-snapshotclass
+  source:
+    persistentVolumeClaimName: git-writer-pvc
